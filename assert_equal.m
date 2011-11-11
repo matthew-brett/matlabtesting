@@ -29,7 +29,7 @@ for e = 1:numel(m1)
     end
     continue
   end
-  D = c1 - c2;
+  D = abs(c1 - c2);
   if any(D(:)>tol)
     error(['Matrices differ at tol ' num2str(tol)]);
   end
